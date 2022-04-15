@@ -5,10 +5,11 @@
   }
 
  .hero-section{
-      background :url(https://smilepure.thememove.com/wp-content/uploads/2019/10/h1-slider-bg.png)no-repeat;
+      background :url(https://smilepure.thememove.com/wp-content/uploads/2019/10/h1-slider-bg.png);
       width: 100%;
       background-position: center center;
       background-size: cover;
+      background-repeat: no-repeat;
        
  }
   .menu-icon{

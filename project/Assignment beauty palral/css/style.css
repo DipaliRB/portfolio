@@ -64,24 +64,7 @@ p{
 
 
  @media screen and (min-width: 320px) {
- /* .carousel-item.active {
-    display: block; */
-
-
- }
  
-
-    /* .centered {
-        position:absolute;
-        top: 10%;
-        left: 40%;
-        transform: translate(-50%, -50%);
-    }
-    .back-white{
-            width: 50%;
-            height: 100px;
-            background-color:white;
-    } */
     .image {
         position: absolute;
         top: 50%;
@@ -109,16 +92,7 @@ p{
     
      
     .box{
-        /* background-color: #553737;
         
-        border: 1px solid hotpink;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-         border-radius: 10px;  */
     
          border: 1px solid hotpink;
         color: white;
@@ -135,9 +109,7 @@ p{
     }
      /* -----------------------------------------------------massage---- */
     .hotpink{
-         /* background-image: -webkit-linear-gradient(to right top, var(--DTSecondaryColor), var(--DTPrimaryColor)) !important;
-        background-image: -moz-linear-gradient(to right top, var(--DTSecondaryColor), var(--DTPrimaryColor)) !important;
-        background-image: linear-gradient(to right top, var(--DTSecondaryColor), var(--DTPrimaryColor)) !important;  */
+         
         width: 130px;
         height: 130px;
          border-radius: 55px 0 !important;
@@ -154,9 +126,7 @@ p{
     
     }
    
-    /* transform: rotateX(50deg); */
-    /* transform: rotateY(60deg); */
-    /* transform: scale(3); */
+   
   
     .hotpink:hover {
     transform: skew(20deg);
@@ -290,12 +260,7 @@ p{
 
   }
   
-  /* .img-box1 img {
-    display: block;
-    width: 100%;
-    height: auto;
-  } */
-  
+ 
   .img-box1:hover > .overlay {
     opacity: 0.7;
     cursor: pointer;  
@@ -345,8 +310,7 @@ p{
     border-radius: 55px 0 !important;
 
    border: none !important;
-   /* background-color: hotpink; */
-   /* transform: rotateX(50deg); */
+   
 }
 .position{
    position: relative;

@@ -198,15 +198,6 @@ ul.navbar-nav li a.nav-link:hover{
 
 
 
-          /* .desk-nav ul li a{
-            font-size:18px;
-            color: white;
-            font-family: 'Abhaya Libre', serif;
-            text-decoration: none; 
-            margin: 6px;
-            text-transform: uppercase;
-            
-        } */
 
         .contain-box::after{
             content: "";

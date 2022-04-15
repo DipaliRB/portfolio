@@ -25,7 +25,7 @@
           $headers .= "X-Mailer: PHP". phpversion() ."\r\n"; 
                  //*******************new code end ***********
          $retval = @mail ($to,$subject,$message,$headers);
-         $retval=true;
+        //  $retval=true;
          
         if($retval == true)
         {
