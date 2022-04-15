@@ -22,7 +22,8 @@
             <h6>loading.......</h6>
         </div>
     </div> -->
-    <div class="cursor"></div>
+    <div id="cursor"></div>
+    
   <header class="header_wrapper">
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
@@ -90,7 +91,7 @@
             <div class="text">
                <h4>Hello I'M</h4>
                </div>
-               <h1 class="display-1 fw-bold">Dipali Bhandari</h1> 
+               <h1 class="display-1 fw-bold">Dipali Bhandari<div class="yellow"></div></h1> 
                <h3>I am <span class="auto-input"></span></h3>
                <p>I am a professional Web designer with <br>
                    Front-end development skill-based in Pune.
@@ -146,8 +147,7 @@
                     <div class="animated-bar"></div>
                   </div>
             
-                    <p class=" text-justify pb-3 text-white">I'm hard-working, Web designer and front-end developer offering excellent work ethic, enthusiasm and adaptability with learning experience in graphic design, frontend development.
-                     I have completed my  Deploma in Computer Engineering  from RSIT college kallam aurangabad university in the year 2017 & also completed UI/UX Development course from Envision Computer Training Institute.</p>
+                    <p class=" text-justify pb-3 text-white">I'm a hard-working, Web designer and front-end developer offering an excellent work ethic, enthusiasm, and adaptability with a learning experience in graphic design, and front-end development. I have completed my Diploma in Computer Engineering from RSIT college Kallam Aurangabad university in the year 2017 & also completed UI/UX Development course from Envision Computer Training Institute.</p>
         
             <div class="row pt-3">
                 <div class="col-lg-6 col-sm-12 col-12 col-md-12">
@@ -164,7 +164,7 @@
                         <p><span class="text-red fw-bold ps-5">Gender : </span>Female</p>
                         <p><span class="text-red fw-bold ps-5">Freelance : </span>Available</p>
                         <p class="ps-1"><span class="text-red fw-bold ps-5 ">Language : </span>Marathi /Hindi /English</p>
-                        <p><span class="text-red fw-bold ps-5">Qualification : </span> Deploma in Computer Engineering.</p>
+                        <p><span class="text-red fw-bold ps-5">Qualification : </span> Diploma in Computer Engineering.</p>
                         <p><span class="text-red fw-bold ps-5">City : </span>Pune Maharashtra</p>
                         
                     </div>
@@ -371,7 +371,7 @@
                 
 
                     <div class="port-img mt-3" data-aos="flip-right">
-                        <img class="img-fluid" src="Images/illustrucation/buaytypalral3.JPG">
+                        <img class="img-fluid" src="Images/illustrucation/project-beauty.png">
                         <div class="hover-effect">
                             <a class="d-flex align-items-center justify-content-center" href="project/Assignment beauty palral/index.html"><a class="main-btn" href="#">VIEW WEBSITE</a></a>
                         </div>
@@ -423,13 +423,13 @@
             <div class="container pb-5">
                 <div class="ab-title text-center">
               
-                    <p class="common-desctiption pt-3">My Intro</p>
+                    <p class="common-desctiption pt-3">Feel Free To Contact Me Anytimes</p>
                     <h1 class="common-title">Contact <span>Me</span></h1>
                     <div class="animated-bar"></div>
                     
                   </div>
                   
-                  <div class="col-sm-6" id="frmdiv">
+                  <!-- <div class="col-sm-6" id="frmdiv">
                     <div id="succmsg" class="col-sm-12" style="display: none;"></div>
                     <form name="frm_contact_us" id="frm_contact_us" method="post" action="">
                         <div class="text-danger"><b>All fields are mandatory</b></div>
@@ -454,12 +454,12 @@
                         </div>
                     
                     </form>
-                </div>
+                </div> -->
 
 
                  
                 
-              <!-- <div class="row pt-3">
+               <div class="row pt-3">
                 
                  <div class="col-lg-4 col-12 col-sm-12 col-md-12">
                     <img class="img-fluid mt-2 text-center" src="Images/illustrucation/finalcontactgif.gif"> 
@@ -496,7 +496,7 @@
                       </div>
                    </div> 
                 </div>
-                  -->
+                  
             </div>
         
         </section>
@@ -514,33 +514,76 @@
         </section>
         
         <!-- ===============cursor=========== -->
-        <!-- <script type="text/javascript">
-            const cursor = document.querySelector(".cursor");
-            var timeout;
+            <script>
+                        (function() {
+    var mousePos;
+    var moved = false;
+
+    document.onmousemove = handleMouseMove;
+    setInterval(getMousePosition, 100);
+
+    function handleMouseMove(event) {
+        var dot, eventDoc, doc, body, pageX, pageY;
+      
+      moved = true;
+
+        event = event || window.event;
+        if (event.pageX == null && event.clientX != null) {
+            eventDoc = (event.target && event.target.ownerDocument) || document;
+            doc = eventDoc.documentElement;
+            body = eventDoc.body;
+
+            event.pageX = event.clientX +
+              (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+              (doc && doc.clientLeft || body && body.clientLeft || 0);
+            event.pageY = event.clientY +
+              (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+              (doc && doc.clientTop  || body && body.clientTop  || 0 );
+        }
+
+        mousePos = {
+            x: event.pageX,
+            y: event.pageY
+        };
+    }
+    function getMousePosition() {
+        var pos = mousePos;
+
+        if (!pos) {
+            // We haven't seen any movement yet
+        }
+        else if(moved === true) {
+            // Use pos.x and pos.y 
+             console.log("Pos:", pos.x, pos.y);
+          moved = false;
+          cursor = document.querySelector('#cursor');
+          cursor.style.left = (pos.x -5) + 'px' ;
+          cursor.style.top = (pos.y -5) + 'px';
+
+        }
+    }
+})();
+
+
+
+
+// HOVER ME
+
+$("h1").hover(over, out);
+
+function over(){
+	TweenMax.to("#cursor", 0.2, {width:50, height:50, filter: "blur(9px)", borderColor:"rgba(255,255,0,0.5)", backgroundColor:"rgba(255,255,0,0.3)", ease: Power3.easeOut})
+	TweenMax.to(".yellow", .2, {opacity:1, y: -5})
+}
+
+function out(){
+	TweenMax.to("#cursor", 0.2, {width:35, height:35, filter: "blur(0px)", borderColor:"rgba(255,255,0,1)", backgroundColor:"rgba(255,255,0,0)", ease: Power3.easeOut})
+	TweenMax.to(".yellow", .2, {opacity:0, y: 0})
+}
+
+            </script>
         
-            //follow cursor on mousemove
-            document.addEventListener("mousemove", (e) => {
-              let x = e.pageX;
-              let y = e.pageY;
-        
-              cursor.style.top = y + "px";
-              cursor.style.left = x + "px";
-              cursor.style.display = "block";
-        
-              //cursor effects when mouse stopped
-              function mouseStopped(){
-                cursor.style.display = "none";
-              }
-              clearTimeout(timeout);
-              timeout = setTimeout(mouseStopped, 1000);
-            });
-        
-            //cursor effects when mouseout
-            document.addEventListener("mouseout", () => {
-              cursor.style.display = "none";
-            });
-            </script> -->
-        
+
         <!-- ==================cursor end======== -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"

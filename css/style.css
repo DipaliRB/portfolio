@@ -56,6 +56,7 @@
 *{
      margin: 0px;
      padding: 0px;
+     
  }
   /* .hero-section{
      background: url(../Images/background/banner3.avif);
@@ -141,7 +142,7 @@ a {
 }
 
 .error{
-    color: red;
+    color:var(--primary-text);
 }
 
 /* video {
@@ -255,6 +256,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 h1 {
+    
      font-size: 54px;
     line-height: 68px;
     font-weight: 800;
@@ -636,7 +638,7 @@ span{
   .custom-form{
       background:#c4d4ec;
      margin-bottom: 10px;
-      height: 500px;
+      height: auto;
   }
 
 
@@ -697,75 +699,23 @@ span{
 
 
     /* ======cursor======= */
-    /* .cursor{
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        border: 1px solid #c6c6c6;
-        border-radius: 50%;
-        left: 0;
-        top: 0;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: .1s;
-    }
-    .cursor1{
-        position: fixed;
-        width: 8px;
-        height: 8px;
-        background-color: #c6c6c6;
-        border-radius: 50%;
-        left: 0;
-        top:0;
-        pointer-events: none;
-        transform: translate(-50%, -50%);
-        transition: .15s;
-    }
+   
 
-    .content-cursor:hover ~ .cursor{
-        transform: translate(-50%, -50%) scale(1.5);
-        background-color: #c6c6c6;
-        opacity: .5;
-    }
-    .content-cursor:hover ~ .cursor1{
-        opacity: 0;
-    } */
+#cursor {
+	background-color: trasparent;
+	border: 2px solid var(--primary-text);
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	border-radius: 100%;
+	transition: all 0.2s ease;
+	z-index: 20;
+	pointer-events: none;
+}
 
-
-
-    .cursor{
-        z-index: 999;
-        position: fixed;
-        background:var(--primary-text);
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        pointer-events: none;
-        box-shadow: 0 0 20px #2696E8,
-                    0 0 60px #2696E8,
-                    0 0 100px #2696E8;
-        animation: colors 5s infinite;
-        transform: translate(-50%, -50%);
-        display: none;
-      }
-      
-      @keyframes colors{
-        0%{
-          filter: hue-rotate(0deg);
-        }
-        100%{
-          filter: hue-rotate(360deg);
-        }
-      }
-      
-      .cursor:before{
-        content: '';
-        position: absolute;
-        background: #2696E8;
-        width: 50px;
-        height: 50px;
-        opacity: 0.2;
-        transform: translate(-30%, -30%);
-        border-radius: 50%;
-      }
-            
+.yellow {
+  background-color: var(--primary-text);
+  height: 5px;
+  width: auto;
+  opacity: 0;
+}
